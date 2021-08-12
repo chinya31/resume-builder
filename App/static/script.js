@@ -11,29 +11,7 @@ const getState = () => {
     about: $('about'),
     career: $('career'),
     education: $('education'),
-    job1: {
-      date: {
-        start: $('job-1__start'),
-        end: $('job-1__end')
-      },
-      details: $('job-1__details')
-    },
-    job2: {
-      date: {
-        start: $('job-2__start'),
-        end: $('job-2__end')
-      },
-      details: $('job-2__details')
-    },
-    job3: {
-      date: {
-        start: $('job-3__start'),
-        end: $('job-3__end')
-      },
-      details: $('job-3__details')
-    },
-    references: $('references')
-  }
+    skills: $('skills')
   return state
 }
 
@@ -134,11 +112,7 @@ h1, p {
   createGroup('ABOUT ME', state.about)
   createGroup("CAREER OBJECTIVES", state.career)
   createGroup('EDUCATION', state.education)
-  createGroup('EMPLOYMENT EXPERIENCE', '')
-  createGroup(state.job1.date.start + ' to ' + state.job1.date.end, state.job1.details)
-  createGroup(state.job2.date.start + ' to ' + state.job2.date.end, state.job2.details)
-  createGroup(state.job3.date.start + ' to ' + state.job3.date.end, state.job3.details)
-  createGroup('REFERENCES', state.references)
+  createGroup('SKILLS', state.skills)
   $('</div>')
   $('<div class="instructions">Right click the page and "Save As..." to make a copy of this resume</div>')
   $('</body></html>')
